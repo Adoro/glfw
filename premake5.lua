@@ -17,6 +17,7 @@ project "GLFW"
 		"src/vulkan.c",
 		"src/window.c"
 	}
+
 	filter "system:linux"
 		pic "On"
 
@@ -62,7 +63,9 @@ project "GLFW"
 		defines 
 		{ 
 			"_GLFW_WIN32",
-			"_CRT_SECURE_NO_WARNINGS"
+			"_CRT_SECURE_NO_WARNINGS",
+			"GLFW_BUILD_WIN32=ON",
+			"GLFW_STATIC"
 		}
 
 	filter "configurations:Debug"
